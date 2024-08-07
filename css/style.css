@@ -1,0 +1,64 @@
+body{
+    min-height: 100vh;
+    margin: 0;
+    font-family: Poppins;
+    color: #1E1E1E;
+    background-color: #CDCDCD;
+    background-image:
+    repeating-linear-gradient(
+        to right, transparent 0 150px, #0001 150px 151px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 150px, #0001 150px 151px
+    ),
+    linear-gradient(to right, #CDCDCDcc, #CDCDCDcc),
+    url(images/bg.jpg);
+}
+
+
+.banner {
+    margin-top: -50px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .product {
+    /* background-color: red; */
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: 80px;
+    display: flex;
+}
+
+.banner .product .soda {
+    
+    background: var(--url) var(--left) 0, url('/images/freepik-export-20240807114224Y8wb.png');
+
+    background-size: auto 100%;
+    width: 400px;
+    /* aspect-ratio: 2 / 4; */
+    height: 500px;
+    background-blend-mode: multiply;
+    mask-image: url('/images/freepik-export-20240807114224Y8wb.png');
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    transform: translateX(-50%);
+}
+.banner .product:hover{
+    --left: -1000px;
+    transform: translateX(-50%) translateY(-120px);
+}
+.banner .product .soda:nth-child(2){
+    opacity: 0;
+}
+.banner .product .soda:nth-child(2):hover{
+    opacity: 1;
+}
